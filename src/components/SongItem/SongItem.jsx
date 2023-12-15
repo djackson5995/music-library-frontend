@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import "./SongItem.css";
 
-const SongItem = ({ title }) => {
+const SongItem = ({ title, activeIndex, setActiveIndex, index }) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
-  const handleClick = (e) => {
+  const handleFavorite = (e) => {
     setIsFavorite(!isFavorite);
+  };
+  const handleActive = () => {
+    setActiveIndex(index);
   };
   const btnClass = isFavorite ? "active-btn" : "";
 
   return (
-    <div className="song-item">
+    <div onClick={handleActive} className="song-item">
       <span>{title}</span>
-      <button className={btnClass} onClick={handleClick}>
+      <button className={btnClass} onClick={handleFavorite}>
         Favorite
       </button>
     </div>
