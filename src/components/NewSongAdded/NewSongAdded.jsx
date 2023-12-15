@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const NewSong = ({}) => {
+const NewSong = ({ onNewSong }) => {
   const [title, setTitle] = useState("");
   const [artist, setArtist] = useState("");
   const [album, setAlbum] = useState("");
@@ -12,8 +12,7 @@ const NewSong = ({}) => {
       artist,
       album,
     };
-
-    console.log(formData);
+    onNewSong(formData);
   };
 
   return (

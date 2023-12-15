@@ -1,8 +1,9 @@
 import SongItem from "../SongItem/SongItem";
 
-const SongList = ({}) => {
-  const songs = ["Passion Fruit", "She Will"];
-  const songitems = songs.map((song) => <SongItem key={song} title={song} />);
+const SongList = ({ songs = [] }) => {
+  const songitems = songs.map((song) => (
+    <SongItem key={song.title} title={song.title} />
+  ));
   return (
     <div className="flex-item">
       <h4>My Songs</h4>
