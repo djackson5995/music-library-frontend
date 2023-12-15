@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import SongList from "./components/SongList/SongList";
 import SongInfo from "./components/SongInfo/SongInfo";
+import NewSong from "./components/NewSongAdded/NewSongAdded";
 
 function App() {
   const selectedSong = {
@@ -18,6 +19,7 @@ function App() {
       <div className="flex-container">
         <SongList />
         <SongInfo songObj={selectedSong} />
+        <NewSong />
       </div>
     </div>
   );
