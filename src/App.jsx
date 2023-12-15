@@ -3,10 +3,16 @@ import Header from "./components/Header/Header";
 import SongList from "./components/SongList/SongList";
 import SongInfo from "./components/SongInfo/SongInfo";
 import NewSong from "./components/NewSongAdded/NewSongAdded";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import initData from "./components/Data/Data";
 
 function App() {
   const [songs, setSongs] = useState([]);
+
+  // delete useEffect and initData
+  useEffect(() => {
+    setSongs(initData);
+  }, {});
 
   const handleNewSong = (newSong) => {
     const updatedSongs = [...songs, newSong];
