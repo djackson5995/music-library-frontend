@@ -7,7 +7,13 @@ function App() {
     <div className="App">
       <Header />
       <SongList />
-      <SongInfo title="Passion Fruit" />
+      <SongInfo
+        title="Passion Fruit"
+        artist="Drake"
+        genre="rap"
+        album="More Life"
+        releaseDate={2017}
+      />
     </div>
   );
 }
