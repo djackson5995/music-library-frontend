@@ -1,22 +1,22 @@
-const SongInfo = ({ title, artist, genre, album, releaseDate }) => {
+const SongInfo = ({ songObj }) => {
   return (
     <div>
-      <h4>{title}</h4>
+      <h4>{songObj.title}</h4>
       <div>
         <span>Artist</span>
-        <span>{artist}</span>
+        <span>{songObj.artist}</span>
       </div>
       <div>
         <span>Genre</span>
-        <span>{genre}</span>
+        <span>{songObj.genre}</span>
       </div>
       <div>
         <span>Album</span>
-        <span>{album}</span>
+        <span>{songObj.album}</span>
       </div>
       <div>
         <span>Release Date </span>
-        <span>{releaseDate}</span>
+        <span>{songObj.releaseDate}</span>
       </div>
     </div>
   );
