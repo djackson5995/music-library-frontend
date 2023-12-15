@@ -1,3 +1,5 @@
+import "./SongInfo.css";
+
 const SongInfo = ({ songObj }) => {
   return (
     songObj && (
