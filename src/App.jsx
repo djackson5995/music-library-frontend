@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import SongList from "./components/SongList/SongList";
 import SongInfo from "./components/SongInfo/SongInfo";
+
 function App() {
   const selectedSong = {
     title: "Passion Fruit",
@@ -14,8 +15,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SongList />
-      <SongInfo songObj={selectedSong} />
+      <div className="flex-container">
+        <SongList />
+        <SongInfo songObj={selectedSong} />
+      </div>
     </div>
   );
 }

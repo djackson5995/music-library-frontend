@@ -1,6 +1,6 @@
 const SongInfo = ({ songObj }) => {
   return (
-    <div>
+    <div className="flex-item">
       <h4>{songObj.title}</h4>
       <div>
         <span>Artist</span>
