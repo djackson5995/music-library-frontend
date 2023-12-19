@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import TextField from "../TextField/TextField";
 
 const NewSong = ({ onNewSong }) => {
   const [title, setTitle] = useState("");
   const [artist, setArtist] = useState("");
   const [album, setAlbum] = useState("");
+  const [genre, setGenre] = useState("");
+  const [yearReleased, setYear] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,18 +21,15 @@ const NewSong = ({ onNewSong }) => {
   return (
     <form onSubmit={handleSubmit} className="flex-item">
       <h4>Add Song</h4>
-      <div>
-        <label>Title</label>
-        <input value={title} onChange={(e) => setTitle(e.target.value)} />
-      </div>
-      <div>
-        <label>Artist</label>
-        <input value={artist} onChange={(e) => setArtist(e.target.value)} />
-      </div>
-      <div>
-        <label>Album</label>
-        <input value={album} onChange={(e) => setAlbum(e.target.value)} />
-      </div>
+      <TextField lable="Title" value={title} onChange={setTitle} />
+      <TextField lable="Artist" value={artist} onChange={setArtist} />
+      <TextField lable="Genre" value={album} onChange={setAlbum} />
+      <TextField lable="Album" value={genre} onChange={setGenre} />
+      <TextField
+        lable="Year Released"
+        value={yearReleased}
+        onChange={setYear}
+      />
       <button type="submit">Add Song</button>
     </form>
   );
