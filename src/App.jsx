@@ -4,16 +4,25 @@ import SongList from "./components/SongList/SongList";
 import SongInfo from "./components/SongInfo/SongInfo";
 import NewSong from "./components/NewSongAdded/NewSongAdded";
 import React, { useState, useEffect } from "react";
-import initData from "./components/Data/Data";
+import axios from "axios";
 
 function App() {
   const [songs, setSongs] = useState([]);
   const [activeIndex, setActiveIndex] = useState(-1);
-  console.log(activeIndex);
+
+  const fetchSongs = async () => {
+    try {
+      const response = await axios.get("https://localhost:7262/api/Songs");
+      // console.log(response);
+      setSongs(response.data);
+    } catch (error) {
+      console.warn("Error in fetch songs request", error);
+    }
+  };
 
   // delete useEffect and initData
   useEffect(() => {
-    setSongs(initData);
+    fetchSongs();
   }, {});
 
   const handleNewSong = (newSong) => {
