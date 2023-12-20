@@ -37,8 +37,8 @@ const NewSong = ({ onNewSong }) => {
       <div className="p-2">
         <TextField lable="Title" value={title} onChange={setTitle} />
         <TextField lable="Artist" value={artist} onChange={setArtist} />
-        <TextField lable="Genre" value={album} onChange={setAlbum} />
         <TextField lable="Album" value={genre} onChange={setGenre} />
+        <TextField lable="Genre" value={album} onChange={setAlbum} />
         <TextField
           lable="Year Released"
           value={yearReleased}
