@@ -1,5 +1,8 @@
-.date-item{
+.data-item{
+    border-bottom: solid gray;
     display: flex;
     justify-content: space-between;
+    padding: 30px 10px;
+
    
 }
