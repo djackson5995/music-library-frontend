@@ -10,7 +10,7 @@ const SongItem = ({ title, activeIndex, setActiveIndex, index }) => {
   const handleActive = () => {
     setActiveIndex(index);
   };
-  const btnClass = isFavorite ? "active-btn" : "";
+  const btnClass = isFavorite ? "btn btn-success" : "btn-btn-secondary";
   const activeClass = index === activeIndex ? "active-song" : "";
 
   return (
