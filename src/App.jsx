@@ -25,11 +25,6 @@ function App() {
     fetchSongs();
   }, {});
 
-  const handleNewSong = (newSong) => {
-    const updatedSongs = [...songs, newSong];
-    setSongs(updatedSongs);
-  };
-
   const selectedSong = songs[activeIndex];
 
   return (
@@ -42,7 +37,7 @@ function App() {
           setActiveIndex={setActiveIndex}
         />
         <SongInfo songObj={selectedSong} />
-        <NewSong onNewSong={handleNewSong} />
+        <NewSong onNewSong={fetchSongs} />
       </div>
     </div>
   );
